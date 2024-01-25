@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnsf0wnk48xa1"]
+
+[ext_resource type="PackedScene" uid="uid://b0b15mhre8jew" path="res://map/map.tscn" id="1_hj1ml"]
+
+[node name="Map1" instance=ExtResource("1_hj1ml")]
+next_level = "res://map/map_6.tscn"
+
+[node name="TileMap" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(0, 65536, 1, 1, 65536, 1, 2, 65536, 1, 3, 65536, 1, -851961, 65536, 1, -851960, 65536, 1, -851959, 65536, 1, -851958, 65536, 1, -851957, 65536, 1, -851956, 65536, 1, -851955, 65536, 1, -851954, 65536, 1, -851953, 65536, 1, -851952, 65536, 1, -851951, 65536, 1, -851950, 65536, 1, -851949, 65536, 1, -851948, 65536, 1, -851947, 65536, 1, -851946, 65536, 1, -851945, 65536, 1, -851944, 65536, 1, -851943, 65536, 1, -851942, 65536, 1, -327674, 65536, 1, -655359, 65536, 1)
+
+[node name="Goal" parent="LevelElements" index="0"]
+position = Vector2(410, -221)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://7euf1qy2c3nm"]
+
+[ext_resource type="PackedScene" uid="uid://b0b15mhre8jew" path="res://map/map.tscn" id="1_7du2r"]
+
+[node name="Map1" instance=ExtResource("1_7du2r")]
+next_level = "res://map/map_2.tscn"
+
+[node name="TileMap" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(0, 65536, 1, 1, 65536, 1, 2, 65536, 1, 3, 65536, 1, 4, 65536, 1, 5, 65536, 1, 12, 65536, 1, 13, 65536, 1, 14, 65536, 1, 15, 65536, 1, 16, 65536, 1, 17, 65536, 1, 18, 65536, 1)
+
+[node name="Label" type="Label" parent="LevelElements" index="2"]
+offset_left = 87.0
+offset_top = -55.0
+offset_right = 248.0
+offset_bottom = -32.0
+theme_override_font_sizes/font_size = 10
+text = "Jump With Space Bar"

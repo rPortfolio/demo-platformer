@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://tlvesuh5sv02"]
+
+[ext_resource type="PackedScene" uid="uid://b0b15mhre8jew" path="res://map/map.tscn" id="1_0r3gt"]
+
+[node name="Map" instance=ExtResource("1_0r3gt")]
+next_level = "res://map/map_1.tscn"
+
+[node name="Label" type="Label" parent="LevelElements" index="2"]
+offset_left = 2.0
+offset_top = -93.0
+offset_right = 90.0
+offset_bottom = -44.0
+theme_override_font_sizes/font_size = 10
+text = "Move With 
+Arrow Keys"

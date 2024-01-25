@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsgv3jp6lsqrn"]
+
+[ext_resource type="PackedScene" uid="uid://b0b15mhre8jew" path="res://map/map.tscn" id="1_snxgp"]
+[ext_resource type="PackedScene" uid="uid://c56rl13vkw1ow" path="res://elements/moving_platform.tscn" id="2_q4elv"]
+
+[sub_resource type="Animation" id="Animation_ng8nf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(64, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2mona"]
+resource_name = "move"
+length = 2.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(64, 0), Vector2(240, -96)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tbxjv"]
+_data = {
+"RESET": SubResource("Animation_ng8nf"),
+"move": SubResource("Animation_2mona")
+}
+
+[node name="Map" instance=ExtResource("1_snxgp")]
+next_level = "res://main_menu/main_menu.tscn"
+
+[node name="TileMap" parent="." index="0"]
+layer_0/tile_data = PackedInt32Array(0, 65536, 1, 1, 65536, 1, 2, 65536, 1, -589814, 65536, 1, -917490, 65536, 1, -1245174, 65536, 1, -1507314, 65536, 1, -1507313, 65536, 1, -1507312, 65536, 1, -1507311, 65536, 1, -1507310, 65536, 1, -1507309, 65536, 1, -1507308, 65536, 1, -1507307, 65536, 1, -1507306, 65536, 1, -1507305, 65536, 1, -1507304, 65536, 1, -1507303, 65536, 1, -1507302, 65536, 1, -1507301, 65536, 1, -1507300, 65536, 1)
+
+[node name="Goal" parent="LevelElements" index="0"]
+position = Vector2(432, -384)
+
+[node name="MovingPlatform" parent="." index="3" instance=ExtResource("2_q4elv")]
+
+[node name="AnimationPlayer" parent="MovingPlatform" index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_tbxjv")
+}
+
+[editable path="MovingPlatform"]
