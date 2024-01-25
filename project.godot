@@ -23,6 +23,10 @@ window/size/window_width_override=1152
 window/size/window_height_override=648
 window/stretch/mode="canvas_items"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/Owner/Documents/GodotGames/platformer.avi"
+
 [rendering]
 
-environment/defaults/default_clear_color=Color(0.419608, 0.419608, 0.419608, 1)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
